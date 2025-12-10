@@ -46,4 +46,7 @@ public:
 	bool operator <(const Train& obj)const{
 		return this->timedep < obj.timedep;
 	}
+	bool operator ==(const Train& obj)const {
+		return this->num == obj.num;
+	}
 };

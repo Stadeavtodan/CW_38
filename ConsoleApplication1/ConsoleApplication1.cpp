@@ -33,5 +33,16 @@ int main()
         p->showInfo();
     }
 
-    
+    string number;
+    cout << "Enter num: ";
+    cin >> number;
+    bool isFound = false;
+    for (p = table.begin(); p != table.end(); p++) {
+        if (p->getNum() == number) {
+            p->showInfo();
+            isFound = true;
+        }
+    }
+    if (!isFound) { cout << "Not found"; }
+
 }
