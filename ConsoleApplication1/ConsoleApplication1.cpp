@@ -45,4 +45,20 @@ int main()
     }
     if (!isFound) { cout << "Not found"; }
 
+
+    string number2;
+    cout << "Enter num: ";
+    cin >> number2;
+    for (p = table.begin(); p != table.end(); p++) {
+        if (p->getNum() == number2) {
+            cout << "Cancelled: " << p->getNum() << endl;
+            table.erase(p);
+            break;
+        }
+    }
+
+    for (p = table.begin(); p != table.end(); p++) {
+        p->showInfo();
+    }
+
 }
